@@ -1,0 +1,123 @@
+@header-color-bg: #7b77d8;
+@header-color-bg-btn: #a8cfd8;
+
+@shadow-color:rgba(0,0,0,0.5);
+@shadow-hover-color:rgba(219, 130, 36, 0.5);
+
+@body-users-color-bg: #fff;
+@body-chat-color-bg: #f4f5f9;
+
+@messang-color-bgAll: rgba(10, 11, 67, 0.82);
+
+@text-colorMes:rgba(10, 11, 67, 0.82);
+
+@body-mes-inp-color-bg: #fff;
+
+@text-color: #fff;
+
+@font-single: Roboto, sans-serif;
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: @font-single;
+  background-color: black;
+}
+
+.login-container {
+  margin: 150px auto;
+  width: 300px;
+  height: 200px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    display: flex;
+    width: 300px;
+    height: 50px;
+    background-color: @header-color-bg;
+    justify-content: space-around;
+  }
+  &__error {
+    width: 300px;
+    height: 50px;
+
+  }
+  &__send {
+    margin-top: 20px;
+    margin-left: 220px;
+    padding-top: 5px;
+    font-family: @font-single;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: @header-color-bg-btn;
+    font-size: 17px;
+    width: 70px;
+    height: 25px;
+    text-align: center;
+    box-shadow: 0 0 10px @shadow-color;
+    border-radius: 10px;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  &__send:hover{
+    box-shadow: 0 0 10px @shadow-hover-color;
+  }
+}
+
+.header-logo {
+  margin-top: 5px;
+  width: 40px;
+  height: 40px;
+  background-image: url("./images/logo2.png");
+  background-size: cover;
+}
+.header-name {
+  color: @text-color;
+  margin-top: 10px;
+  padding-top: 5px;
+  width: 120px;
+  height: 25px;
+  font-family: @font-single;
+  text-transform: uppercase;
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.error__logo {
+  display: none;
+  float: left;
+  margin-top: 15px;
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  background-image: url("./images/error.png");
+  background-size: cover;
+}
+
+.error__text {
+  display: none;
+  font-family: @font-single;
+  float: right;
+  text-align: left;
+  margin-top: 12px;
+  width: 250px;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.users-input {
+  margin-top: 5px;
+  width: 246px;
+  margin-left: 25px;
+  font-family: @font-single;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  height: 30px;
+}

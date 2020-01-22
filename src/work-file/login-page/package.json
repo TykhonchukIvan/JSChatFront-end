@@ -1,17 +1,19 @@
 {
   "name": "pupsiki2020",
   "version": "1.0.0",
-  "description": "Web-Chat",
+  "description": "Web-Chat Pupsiki2020 from Baku/Kiyev",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode=production",
     "test": "mocha"
   },
   "repository": {
-    "type": "git"
+    "type": "git",
+    "url": "git+https://Musa-94@bitbucket.org/Musa--94/pupsiki2020.git"
   },
-  "author": "Ivan",
+  "author": "Dev { International }",
   "license": "ISC",
+  "homepage": "https://bitbucket.org/Musa--94/pupsiki2020#readme",
   "dependencies": {
     "@babel/core": "7.7.4",
     "@babel/plugin-proposal-class-properties": "7.7.4",
@@ -29,13 +31,7 @@
     "less-loader": "5.0.0",
     "mini-css-extract-plugin": "0.8.0",
     "mocha": "6.2.2",
-    "socket.io-client": "2.3.0",
-    "uws": "^10.148.1",
     "webpack": "4.41.2",
     "webpack-cli": "3.3.10"
-  },
-  "devDependencies": {
-    "eslint": "^6.8.0",
-    "babel-eslint": "10.0.3"
   }
 }
