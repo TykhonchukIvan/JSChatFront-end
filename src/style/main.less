@@ -1,0 +1,48 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import "header.less";
+@import "body.less";
+@import "modal-user.less";
+@import "modal-admin.less";
+@import "message-users.less";
+@import "smile";
+@import "users-online";
+
+@header-color-bg: #55A4C3;
+@header-color-bg-btn: #a8cfd8;
+
+@shadow-color:rgba(0,0,0,0.5);
+@shadow-hover-color:rgba(219, 130, 36, 0.5);
+
+@body-users-color-bg: #fff;
+@body-chat-color-bg: #f4f5f9;
+
+@messang-color-bgAll: rgba(10, 11, 67, 0.82);
+
+@text-colorMes:rgba(10, 11, 67, 0.82);
+
+@body-mes-inp-color-bg: #fff;
+
+@text-color: #fff;
+
+@font-single: Roboto, sans-serif;
+
+.chat {
+  margin: 0 auto;
+  width: 910px;
+  height: 650px;
+  box-shadow: 0 0 10px @shadow-color;
+}
+
+
+::-webkit-scrollbar { width: 5px; height: 3px;}
+::-webkit-scrollbar-button {  background-color: #262c66; }
+::-webkit-scrollbar-track {  background-color: #fffdfd;}
+::-webkit-scrollbar-track-piece { background-color: #fef9ff;}
+::-webkit-scrollbar-thumb { height: 50px; background-color: #0001ff; border-radius: 3px;}
+::-webkit-scrollbar-corner { background-color: #314099;}
+::-webkit-resizer { background-color: #661100;}

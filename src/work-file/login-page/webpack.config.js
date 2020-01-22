@@ -4,14 +4,11 @@ const CssWebpackPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     mode: 'development',
-    entry: path.resolve(__dirname, "./src/index.js"),
-    output: {
-        path: path.resolve(__dirname, "../JSChatBack-end/public"),
-        filename: "index.js"
-    },
-    optimization: {
-        minimize: false,
-    },
+    entry: path.resolve(__dirname,"./src/login-page-index.js"),
+    // output: {
+    //     path: path.resolve(__dirname, "../pupsiki2020_be/public"),
+    //     filename: "index.js"
+    // },
     module: {
         rules: [
             {test: /\.html$/, use: "html-loader"},
@@ -42,8 +39,8 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, "./src/index.html"),
-            filename: "index.html"
+            template: path.resolve(__dirname, "./src/login-page.html"),
+            filename: "login-page.html"
         }),
         new CssWebpackPlugin({
             filename: "style.css"
