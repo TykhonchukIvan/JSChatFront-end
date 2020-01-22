@@ -1,0 +1,74 @@
+.body{
+  display: flex;
+
+  &__chat {
+    width: 710px;
+    height: 600px;
+  }
+
+  &__users {
+    width: 200px;
+    height: 600px;
+    background-color: @body-users-color-bg;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x:hidden;
+  }
+
+}
+
+.message-body {
+  z-index: 1;
+  overflow-y: auto;
+  overflow-x:hidden;
+  width: 710px;
+  height: 480px;
+  background-color: @body-chat-color-bg;
+};
+
+.message-inp {
+  width: 700px;
+  height: 90px;
+  background-color: @body-mes-inp-color-bg;
+  display: flex;
+  justify-content: space-around;
+
+  &__text {
+    width: 500px;
+    height: 90px;
+  }
+
+  &__smile {
+    margin-top: 15px;
+    width: 60px;
+    height: 60px;
+    background-image: url("../images/smile.png");
+    background-size: cover;
+    cursor: pointer;
+  }
+
+  &__send {
+    margin-top: 15px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-image: url("../images/send.png");
+    background-size: cover;
+    cursor: pointer;
+  }
+  &__send:hover{
+    box-shadow: 0 0 10px @shadow-hover-color;
+  }
+};
+
+.text-input {
+  height: 86px;
+  width: 500px;
+  resize: none;
+  outline: none;
+  -moz-appearance: none;
+  border: 0;
+  font-size: 18px;
+  background-color: @body-mes-inp-color-bg;
+}

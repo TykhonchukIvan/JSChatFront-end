@@ -1,0 +1,122 @@
+.message-body {
+  font-family: @font-single;
+  z-index: 1;
+  
+  &__all-message {
+
+    justify-content: flex-start;
+    width: 680px;
+    height: auto;
+    background-color: @body-chat-color-bg;
+    display: flex;
+  };
+
+  &__user-message {
+
+    display: flex;
+    justify-content: flex-end;
+    width: 680px;
+    height: auto;
+    background-color: @body-chat-color-bg;
+  };
+
+}
+
+.body-messageAll {
+  margin: 10px 0 0 10px;
+  padding: 10px 10px 10px 10px;
+  min-width: 0;
+  max-width: 450px;
+  word-wrap: break-word;
+  height: auto;
+  z-index: 1;
+  text-align: justify;
+  border-radius: 10px;
+  background-color: rgba(108, 167, 255, 0.79);
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+.body-messageAll:hover {
+  box-shadow: 0 0 10px @shadow-hover-color;
+}
+
+.name-data-messageAll {
+  margin: 8px 0 0 0;
+  min-width: 0;
+  width: 100px;
+  height: 30px;
+  background-color: @body-chat-color-bg;
+  display: flex;
+  justify-content: center;
+}
+
+.message-dataAll {
+  margin: 0 5px 0 0;
+  z-index: 1;
+  padding: 5px 5px 5px 5px;
+  min-width: 0;
+  width: 50px;
+  text-align: center;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.user-nameAll {
+  padding: 5px 5px 5px 5px;
+  min-width: 0;
+  width: 50px;
+  text-align: center;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.body-messageUser {
+  z-index: 1;
+  background-color: #E2F1F7;
+  margin-top: 10px;
+  padding: 10px 10px 10px 10px;
+  min-width: 0;
+  max-width: 450px;
+  word-wrap: break-word;
+  height: auto;
+  text-align:justify;
+  border-radius: 10px;
+  color: @text-colorMes;
+  box-shadow: 0 0 10px @shadow-color;
+}
+
+.body-messageUser:hover {
+  box-shadow: 0 0 10px @shadow-hover-color;
+}
+
+.name-data-messageUser {
+  margin-top: 8px;
+  min-width: 0;
+  width: 100px;
+  height: 30px;
+  background-color: @body-chat-color-bg;
+  display: flex;
+  justify-content: center;
+}
+
+.message-dataUser {
+  margin: 0 0 0 5px;
+  padding: 5px 0 5px 0;
+  min-width: 0;
+  width: 50px;
+  text-align: center;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.user-nameUser {
+  padding: 5px 0 5px 0;
+  min-width: 0;
+  width: 50px;
+  text-align: center;
+  -moz-user-select: none;
+  user-select: none;
+}

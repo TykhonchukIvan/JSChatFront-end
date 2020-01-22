@@ -1,0 +1,103 @@
+.window-logIn-user {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-image: url("../images/fon2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: @font-single;
+  width: 100%;
+  height: 100%;
+}
+.window-logIn-userHide {
+  display: none;
+}
+.modal-users{
+  margin: 150px auto;
+  width: 300px;
+  height: 220px;
+  background-color: white;
+  border-radius: 7px;
+}
+.modal-users-header {
+  width: 300px;
+  height: 50px;
+  background-color: @header-color-bg;
+  display: flex;
+  justify-content: space-around;
+  &__logo{
+    margin-top: 5px;
+    width: 40px;
+    height: 40px;
+    background-image: url("../images/logo.png");
+    background-size: cover;
+  };
+  &__name{
+    color: @text-color;
+    margin-top: 10px;
+    padding-top: 5px;
+    width: 120px;
+    height: 25px;
+    font-family: @font-single;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    -moz-user-select: none;
+    user-select: none;
+  };
+}
+.modal-users-error {
+  width: 300px;
+  height: 50px;
+  &__logo {
+    display: none;
+    float: left;
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    background-image: url("../images/error.png");
+    background-size: cover;
+  };
+  &__text {
+    display: none;
+    font-family: @font-single;
+    float: right;
+    text-align: left;
+    margin-top: 12px;
+    width: 250px;
+    -moz-user-select: none;
+    user-select: none;
+  };
+}
+.modal-users-input {
+  margin-top: 5px;
+  width: 246px;
+  margin-left: 25px;
+  font-family: @font-single;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  height: 30px;
+}
+.modal-users-send {
+  margin: 20px auto 0 auto;
+  padding: 7px 7px 0 7px;
+  font-family: Roboto, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #55A4C3;
+  font-size: 17px;
+  width: 70px;
+  color: #fff;
+  height: 25px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  user-select: none;
+}
+.modal-users-send:hover{
+  box-shadow: 0 0 10px @shadow-hover-color;
+}
