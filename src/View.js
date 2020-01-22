@@ -89,13 +89,13 @@ class View {
         wrapper[2].append(...modalAdmin);
         this._root.append(...wrapper);
 
-        headerDiv[1].innerText = 'pupsiki 2020';
+        headerDiv[1].innerText = 'Star Chat';
         headerDiv[2].innerText = 'админ';
         headerDiv[3].innerText = '14';
-        elModalUserHeader[1].innerText = 'pupsiki 2020';
+        elModalUserHeader[1].innerText = 'Star Chat';
         elModalUserError[1].innerText = 'Ошибка авторизации! Обратитесь к администратору';
         userContentModal[3].innerText = 'Войти';
-        elModalAdminHeader[1].innerText = 'pupsiki 2020';
+        elModalAdminHeader[1].innerText = 'Star Chat';
         elModalAdminError[1].innerText = 'Неверно! попробуйте снова';
         adminContentModal[4].innerText = 'Войти';
 
