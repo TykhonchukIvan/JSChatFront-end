@@ -16,11 +16,10 @@
   margin: 150px auto;
   width: 300px;
   height: 240px;
-  background-color: white;
+  background-image: @gradient-header;
 }
 
 .modal-admin-header{
-  background-color: @header-color-bg;
   width: 300px;
   height: 50px;
   display: flex;
@@ -70,6 +69,7 @@
     background-size: cover;
   };
   &__text {
+    color: white;
     display: none;
     font-family: @font-single;
     float: right;
@@ -97,7 +97,7 @@
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
-  background-color: #55A4C3;
+  background-color: @background-btn-two;
   font-size: 17px;
   width: 70px;
   color: #fff;
@@ -106,7 +106,10 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   user-select: none;
+  transition: 0.5s;
 }
 .modal-admin-send:hover{
+  background-color: @background-btn-login;
+  color: @background-btn-two;
   box-shadow: 0 0 10px @shadow-hover-color;
 }
