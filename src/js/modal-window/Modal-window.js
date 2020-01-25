@@ -1,13 +1,13 @@
-import { sendGet, sendPostCheckAdmin, sendPostCheckUser, sendGetUsers } from '../../REST';
+import { sendGet } from '../../REST';
 import { drawUsersOnline } from '../draw-users-online/draw-users-online';
+import {sendPostCheckUser, sendPostCheckAdmin} from '../../promiseREST';
 import Socket from '../../WSocket';
-import Modal from '../../Modal';
+
 
 class ModalWindows {
 
     constructor() {
         this._io = new Socket();
-        this._modal = new Modal();
         this._ipAdress = IP;
         this.AdmBtn = document.getElementById('adm-btn');
         this.AdmBtnClose = document.getElementById('modalAdminClose');
@@ -27,11 +27,10 @@ class ModalWindows {
         this.errorAbminImg = document.getElementsByClassName('modal-admin-error__logo')[0];
         this.errorAdminText = document.getElementsByClassName('modal-admin-error__text')[0];
 
-        this._status = false;
         this.inin()
     }
 
-    inin = () =>{
+    inin = () => {
         this._io.getOline(drawUsersOnline);
     };
 
@@ -57,22 +56,21 @@ class ModalWindows {
                 ip: this._ipAdress
             };
 
-            let checkUser = sendPostCheckUser(data);
+            sendPostCheckUser(data)
+                .then(asd => {
 
-            // let checkUser = sendForCheck(data);
+                    if (asd.status === true) {
+                        this.modalUser.style.display = 'none';
+                        this.erroeUserImg.style.display = 'none';
+                        this.erroeUserText.style.display = 'none';
+                        sendGet(drawUsersOnline);
+                    } else {
+                        this.modalUser.style.display = 'block';
+                        this.erroeUserImg.style.display = 'block';
+                        this.erroeUserText.style.display = 'block';
+                    }
 
-            if(checkUser.status === true){
-                this.modalUser.style.display = 'none';
-                this.erroeUserImg.style.display = 'none';
-                this.erroeUserText.style.display = 'none';
-                sendGet(drawUsersOnline);
-
-                // setInterval(() => {sendGet(drawUsersOnline)}, 2000);
-            } else {
-                this.modalUser.style.display = 'block';
-                this.erroeUserImg.style.display = 'block';
-                this.erroeUserText.style.display = 'block';
-            }
+                });
         });
     }
 
@@ -103,7 +101,7 @@ class ModalWindows {
             let admLog = this.validation(loginValue);
             let admPass = this.validation(passwordValue);
 
-            if ( !admLog || !admPass ) {
+            if (!admLog || !admPass) {
                 this.modalAdmin.style.display = 'block';
                 this.errorAbminImg.style.display = 'block';
                 this.errorAdminText.style.display = 'block';
@@ -114,15 +112,33 @@ class ModalWindows {
                 password: this.AdmPasVal.value
             };
 
-            let checkAdmin = sendPostCheckAdmin(data);
 
-            if(checkAdmin.status === true) {
-                document.location.href = './admin/';
-            } else {
-                this.modalAdmin.style.display = 'block';
-                this.errorAbminImg.style.display = 'block';
-                this.errorAdminText.style.display = 'block';
-            }
+            sendPostCheckAdmin(data)
+                .then( chek => {
+
+                    if (chek.status === true) {
+                        document.location.href = './admin/';
+                        sendGet(drawUsersOnline);
+                    } else {
+                            this.modalAdmin.style.display = 'block';
+                            this.errorAbminImg.style.display = 'block';
+                            this.errorAdminText.style.display = 'block';
+                    }
+
+                });
+            // let checkAdmin = sendPostCheckAdmin(data);
+            //
+            // if (checkAdmin.status === true) {
+            //     document.location.href = './admin/';
+            // } else {
+            //     this.modalAdmin.style.display = 'block';
+            //     this.errorAbminImg.style.display = 'block';
+            //     this.errorAdminText.style.display = 'block';
+            // }
+
+
+
+
         });
     }
 
