@@ -4,9 +4,9 @@ const CssWebpackPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     mode: 'development',
-    entry: path.resolve(__dirname, "./src/index.js"),
+    entry: path.resolve(__dirname, "./admin-page/src/index.js"),
     output: {
-        path: path.resolve(__dirname, "../JSChatBack-end/public"),
+        path: path.resolve(__dirname, "../JSChatBack-end/public/admin"),
         filename: "index.js"
     },
     optimization: {
@@ -42,7 +42,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, "./src/index.html"),
+            template: path.resolve(__dirname, "./admin-page/src/index.html"),
             filename: "index.html"
         }),
         new CssWebpackPlugin({
