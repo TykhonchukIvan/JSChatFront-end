@@ -46,28 +46,28 @@ export const sendPost = (data, cb) => {
     xhr.send(JSON.stringify(data));
 };
 
-export const  sendPostCheckUser = (data) => {
-    const xhr = new XMLHttpRequest();
+// export const  sendPostCheckUser = (data) => {
+//     const xhr = new XMLHttpRequest();
+//
+//     xhr.open('POST', '/checkUser', false);
+//     xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+//
+//     xhr.send(JSON.stringify(data));
+//     const check = JSON.parse(xhr.response);
+//
+//     return check;
+// };
 
-    xhr.open('POST', '/checkUser', false);
-    xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-
-    xhr.send(JSON.stringify(data));
-    const check = JSON.parse(xhr.response);
-
-    return check;
-};
-
-export const  sendPostCheckAdmin = (data) => {
-    const xhr = new XMLHttpRequest();
-
-    xhr.open('POST', '/checkAdmin', false);
-    xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-
-    xhr.send(JSON.stringify(data));
-    const check = JSON.parse(xhr.response);
-
-
-    return check;
-
-};
+// export const  sendPostCheckAdmin = (data) => {
+//     const xhr = new XMLHttpRequest();
+//
+//     xhr.open('POST', '/checkAdmin', false);
+//     xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+//
+//     xhr.send(JSON.stringify(data));
+//     const check = JSON.parse(xhr.response);
+//
+//
+//     return check;
+//
+// };
