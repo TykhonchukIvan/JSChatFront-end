@@ -1,4 +1,5 @@
 ///////////////     Modal window user      ////////////////
+
 export const modalUserWrap = [
     {class: "modal-users"}
 ];
